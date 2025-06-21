@@ -1,0 +1,30 @@
+{
+    "categorical_vars": [
+        "PROPID",
+        "RUCA2010",
+        "CONDITION_CAT",
+        "BASMNTTYPE_CAT",
+        "CONSTTYPE_CAT",
+        "EXTCOVER_CAT",
+        "FUELTYPE_CAT",
+        "HEATTYPE_CAT",
+        "ROOFTYPE_CAT"
+    ],
+    "numeric_vars": [
+        "TAXAMT_CLN",
+        "YEARBUILT_CLN",
+        "RENOYEAR_CLN",
+        "NUMPARKSP_CLN",
+        "BEDROOMS_CLN",
+        "BATHROOMS_CLN",
+        "med_hh_inc",
+        "med_yr_built",
+        "med_home_val",
+        "low_home_quart",
+        "upp_home_quart",
+        "home_owner_pct",
+        "mobile_home_pct",
+        "pop_dense",
+        "poverty_pct"
+    ]
+}
