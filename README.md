@@ -4,3 +4,4 @@ This project created aggregated housing condition scores at the resolution 6 lev
 
 Due to the data usage agreement, the original data are not open to the public. However, aggregated housing condition scores at census tract, ZIP Code Tabulation Area, and hexagonal grid levels are open to the public in the Harvard Dataverse (the hyperlink will be updated).  
 
+This project was supported by the Gulf Research Program of the National Academies of Sciences, Engineering, and Medicine under award number (will be updated) and the Scenters for Disease Control and Prevention Climate Ready Cities and States Initiative (will be updated).
