@@ -21,8 +21,8 @@ Usage
 -----
 In `config.py`, set:
    ```python
-   state_shapefile = "path/to/tl_2023_us_state.shp"
-   output_hex_path = "path/to/source_geo_hex.gpkg"
+   state_shapefile = "path_us_state_shp"
+   output_hex_path = "path_source_geoh3_gpkg"
 """
 
 import h3

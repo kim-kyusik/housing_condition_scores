@@ -33,18 +33,18 @@ def run_optuna(X, y, cat_features, n_trials=50):
         
         # Define the hyperparameters to tune.
         params = {
-            "iterations": trial.suggest_int('iterations', 5000, 10000),       # Number of boosting iterations (trees)
-            "depth": trial.suggest_int("depth", 10, 200),                     # Depth of each tree
+            "iterations": trial.suggest_int('iterations', 5000, 10000),                  # Number of boosting iterations (trees)
+            "depth": trial.suggest_int("depth", 10, 200),                                # Depth of each tree
             "learning_rate": trial.suggest_float("learning_rate", 0.01, 0.3, log=True),  # Learning rate (log scale)
-            "random_strength": trial.suggest_float("random_strength", 1, 30),   # Randomness level for feature splits
-            "bagging_temperature": trial.suggest_float("bagging_temperature", 0, 4.0),  # Controls bagging temperature
-            "bootstrap_type": "Bayesian",                                     # Sampling method for bagging
-            "border_count": trial.suggest_int("border_count", 250, 1500),       # Number of splits for numerical features
-            "loss_function": "MultiClass",                                    # For softmax probabilities in multiclass classification
-            "eval_metric": "MultiClass",                                      # Evaluation metric for multiclass
+            "random_strength": trial.suggest_float("random_strength", 1, 30),            # Randomness level for feature splits
+            "bagging_temperature": trial.suggest_float("bagging_temperature", 0, 4.0),   # Controls bagging temperature
+            "bootstrap_type": "Bayesian",                                                # Sampling method for bagging
+            "border_count": trial.suggest_int("border_count", 250, 1500),                # Number of splits for numerical features
+            "loss_function": "MultiClass",                                               # For softmax probabilities in multiclass classification
+            "eval_metric": "MultiClass",                                                 # Evaluation metric for multiclass
             "early_stopping_rounds": 100,
             "grow_policy": "Lossguide",
-            "auto_class_weights": "Balanced",                                 # Automatically balance classes
+            "auto_class_weights": "Balanced",                                            # Automatically balance classes
             "verbose": 100
         }
         

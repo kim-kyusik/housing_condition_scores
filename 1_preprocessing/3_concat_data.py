@@ -34,8 +34,7 @@ Usage
 -----
 1. Configure `config.py` with your paths and table names.  
 2. Ensure the output directories exist:  
-   - `input_data_parquet/`  
-   - `input_data_csv/`  
+   - `input_data/`  
 """
 
 
@@ -344,18 +343,11 @@ y_train = pd.DataFrame(y_train).reset_index(drop=True)
 y_test = pd.DataFrame(y_test).reset_index(drop=True)
 
 # Export parquet
-X_train.to_parquet("input_data_parquet/X_train.parquet", engine='pyarrow')
-X_test.to_parquet("input_data_parquet/X_test.parquet", engine='pyarrow')
+X_train.to_parquet("input_data/X_train.parquet", engine='pyarrow')
+X_test.to_parquet("input_data/X_test.parquet", engine='pyarrow')
 
-y_train.to_parquet("input_data_parquet/y_train.parquet", engine='pyarrow')
-y_test.to_parquet("input_data_parquet/y_test.parquet", engine='pyarrow')
-
-# Export CSV
-X_train.to_csv("input_data_csv/X_train.csv", index=False)
-X_test.to_csv("input_data_csv/X_test.csv", index=False)
-
-y_train.to_csv("input_data_csv/y_train.csv", index=False)
-y_test.to_csv("input_data_csv/y_test.csv", index=False)
+y_train.to_parquet("input_data/y_train.parquet", engine='pyarrow')
+y_test.to_parquet("input_data/y_test.parquet", engine='pyarrow')
 
 # Create txt file
 reducedf = len(df_reduced)

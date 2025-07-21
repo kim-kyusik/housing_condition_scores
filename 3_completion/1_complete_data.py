@@ -29,8 +29,8 @@ Dependencies
 Usage
 -----
 Configure your environment and paths at the top of the script:
-   SQLITE_DB = "path/Data_Warren_12_23_2024.sqlite"
-   DUCKDB_URI = "path/completed_data.duckdb"
+   SQLITE_DB = "path_database_sqlite"
+   DUCKDB_URI = "path_database_duckdb"
    SOURCE_TABLE = "source_table"
    CHUNK_SIZE = 1_000_000
    RAW_MODEL_PATH = "path/output/trained_model_catboost.pkl"
@@ -50,9 +50,9 @@ from sqlalchemy import create_engine
 from completion import create_prediction_df, create_data_predict, create_final_df
 
 # — Constants ————————————————————————————————————————————————————————————
-SQLITE_DB = "sqlite_db/Real_Estate_Property_Data_Warren_12_23_2024.sqlite"
-DUCKDB_URI = "duckdb:///sqlite_db///completed_data.duckdb"
-SOURCE_TABLE = "data_final_v25.02.02"
+SQLITE_DB = "path_database_sqlite"
+DUCKDB_URI = "path_database_duckdb"
+SOURCE_TABLE = "source_table_name"
 CHUNK_SIZE = 1_000_000
 RAW_MODEL_PATH = "proj_catboost/output/trained_model_catboost.pkl"
 CALIB_MODEL_PATH = "proj_catboost/output/calibrated_catboost.pkl"

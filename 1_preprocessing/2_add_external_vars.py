@@ -30,6 +30,7 @@ Usage
    ruca_file_loc     = "data/ruca.csv"
    bg_census_file    = "data/acs_blockgroups.gpkg"
    tract_census_file = "data/acs_tracts.gpkg"
+   all_census_tracts = "all_census_tract.gpkg"
 """
 
 # Import packages
@@ -47,7 +48,7 @@ table_name = config.table_name
 
 # --------- RUCA: Spatial Join with Census Tract Data ---------
 # Read geographic census tract data (GeoPackage)
-geo_data = gpd.read_file(r"data/geo/all_census_tracts.gpkg")
+geo_data = gpd.read_file(config.all_census_tracts)
 
 # Load RUCA CSV file, ensuring string type for GEOID and RUCA fields,
 # and select only the GEOID10 and RUCA2010 columns.
